@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrooveSphere - Basic Package</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #ff7e5f;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #ff7e5f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #feb47b;
+    }
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+      font-size: 24px; /* Adjust size as needed */
+    }
+    .social-icons a:hover {
+      color: #ff7e5f;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+    .mySlides {
+      display: none;
+    }
+    .fade {
+      -webkit-animation: fade 1.5s ease-in-out;
+      animation: fade 1.5s ease-in-out;
+    }
+    @-webkit-keyframes fade {
+      from { opacity: .4 }
+      to { opacity: 1 }
+    }
+    @keyframes fade {
+      from { opacity: .4 }
+      to { opacity: 1 }
+    }
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .dot.active {
+      background-color: #ff7e5f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Basic Package</h1>
+    <p>Our Basic Package is perfect for smaller events or those on a budget,including Bars/Clubs. Here's what you get:</p>
+    <ul>
+      <li>Professional DJ services for up to 7 hours</li>
+      <li>Basic sound system suitable for up to 100 guests</li>
+      <li>Music selection based on your preferences</li>
+      <li>Setup and teardown</li>
+    </ul>
+    <h2>Pricing</h2>
+    <p>Directly Contact Us For A Qoute</p>
+    <ul>
+        <li><a href="https://wa.me/26778612619" class="btn" target="_blank">Get A Quote WhatsApp</a></li>
+        
+    </ul>
+    <a href="index.html#packages" class="btn">Back to Packages</a>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/djkhebaz.entertainment" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
+      <a href="https://twitter.com/yourprofile" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+    </div>
+
+      </div>
+      
+      <!-- Navigation Dots -->
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khebaz Promotions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    section {
+      padding: 2rem 1rem;
+    }
+    #home {
+      background: linear-gradient(to bottom, #e49319 0%, #456743 100%);
+      color: #121212;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #home.hero-content {
+      z-index: 1;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    #home h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    #home p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    #home.hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #52525a;
+      color: #f9f7f7;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background 0.3s ease;
+      font-size: 1rem;
+    }
+    .btn-large {
+      font-size: 1.2rem;
+      padding: 1.5rem 3rem;
+    }
+    .btn:hover {
+      background: #5b40c7;
+    }
+    .cta-buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .usp {
+      margin-top: 3rem;
+      background: rgba(204, 146, 22, 0.8);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    .usp h3,.usp p,.usp h4 {
+      color: #333;
+    }
+    .usp-items {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
+    .usp-item {
+      text-align: center;
+      max-width: 250px;
+    }
+    .usp-item i {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #d18f0b;
+    }
+    #about, #services, #packages, #contact {
+      background: rgb(225, 167, 32);
+      color: #333;
+    }
+    #about h2, #services h2, #packages h2, #contact h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .team,.timeline,.services,.packages {
+      margin-top: 1rem;
+    }
+    .team-members,.services,.packages {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .team-member,.service,.package {
+      text-align: center;
+      max-width: 250px;
+      margin: 0.5rem;
+      background: #dbbb2e;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+    .team-member img,.service img,.package img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .timeline-item {
+      background: #dbbb2e;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin: 0.5rem 0;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      top: 0.5rem;
+      left: -0.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: #777;
+      border-radius: 50%;
+    }
+    .timeline-item span {
+      font-weight: bold;
+      margin-right: 0.5rem;
+      color: #333;
+    }
+    .timeline-item p {
+      margin: 0;
+    }
+    #contact {
+      text-align: center;
+    }
+    #contact a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      background: #6767a3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    #contact a:hover {
+      background: #05f37c;
+    }
+    /* Social Media Icons Styling */
+    .social-icons {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #333; /* Icon color */
+      font-size: 1.5rem; /* Icon Size */
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #d5ac09; /* Change the color on hover */
+    }
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+      #home h2 {
+        font-size: 2rem;
+      }
+      #home p {
+        font-size: 1rem;
+      }
+      .usp-items {
+        flex-direction: column;
+      }
+      .usp-item {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .team-members,.services,.packages {
+        flex-direction: column;
+      }
+      .team-member,.service,.package {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="home">
+  <img src="https://i.imgur.com/y92yfyc.png" alt="Khebaz Promotions in Action" class="hero-image">
+  <div class="hero-content">
+    <h2>Elevate Your Event with Khebaz Promotions</h2>
+    <p>Professional DJ Services for Your Special Day</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn btn-large">Contact Us</a>
+      <a href="#packages" class="btn btn-large">View Packages</a>
+      <a href="reviews.html" class="btn btn-large">Client Reviews</a> <!-- New link added here -->
+      <a href="calendar.html" class="btn btn-large">View Events Calendar</a>
+      <a href="book now.html" class="btn btn-large">Book Now</a> <!-- New link added here -->
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 style="text-align: center; margin-bottom: 2rem;">Our Story</h2>
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <p>Khebaz Promotions was founded on a deep passion for music and a commitment to creating unforgettable experiences.</p>
+    <p>We understand that every event is unique, and we strive to deliver tailored solutions that exceed our clients' expectations. 
+      Our journey began with a simple dream: to share our love for music and create lasting memories for our community.</p>
+    <p>Khebaz Promotions, We are your partners in creating an exceptional event experience. 
+      Our team of seasoned DJs and dedicated event planners work tirelessly to ensure that every detail is perfect.</p>
+    <p>We believe that the key to a successful event lies in the meticulous planning and execution of every aspect, from music 
+      selection to logistics and decor. Our extensive music library and state-of-the-art sound and lighting equipment ensure an unforgettable 
+      atmosphere for your guests.</p>
+  </div>
+  <div class="team">
+    <h3>Meet the Team</h3>
+    <div class="team-members">
+      <div class="team-member">
+        <a href="https://www.facebook.com/kabelo-ramapulana" target="_blank" title="Visit Kabelo Ramapulana's Official Facebook Profile">
+        <img src="https://i.imgur.com/tP8J2JC.jpeg" alt="Team Member 1">
+        <h4>Kabelo Ramapulana</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-member">
+        <a href="https://www.facebook.com/Keitshirile-Moshebashebi" target="_blank" title="Visit Hazel Serumola's Official Facebook Profile">
+        <img src="https://i.imgur.com/tP8J2JC.jpeg" alt="Team Member 2">
+        <h4>Hazel Serumola</h4>
+        <p>Event Coordinator</p>
+      </div>
+      <!-- New team members -->
+      <div class="team-member">
+        <a href="https://www.choppies.com/" target="_blank" title="Visit Choppies Official Website">
+          <img src="https://i.imgur.com/pLmbfoW.jpeg" alt="Choppies">
+          <h4>Choppies</h4>
+          <p>Sponsors</p>
+        </a>
+      </div>
+      <div class="team-member">
+        <a href="https://www.sefalana.com/" target="_blank" title="Visit Sefalana Official Website">
+        <img src="https://i.imgur.com/u111ECN.jpeg" alt="Team Member 4">
+        <h4>Sefalana</h4>
+        <p>Sponsors</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <h3>Our Journey</h3>
+    <div class="timeline-item">
+      <span>2018</span>
+      <p>Khebaz Promotions was founded by Kabelo Ramapulana</p>
+    </div>
+    <div class="timeline-item">
+      <span>2019</span>
+      <p>We book our first wedding and corporate event</p>
+    </div>
+    <div class="timeline-item">
+      <span>2020</span>
+      <p>We expand our services to include event planning and lighting</p>
+    </div>
+    <div class="timeline-item">
+      <span>2021</span>
+      <p>We invest in advanced sound and lighting equipment</p>
+    </div>
+    <div class="timeline-item">
+      <span>2022</span>
+      <p>We celebrate our 4th anniversary and look forward to many more events</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">
+      <i class="fas fa-music"></i>
+      <h3>Professional DJ Services</h3>
+      <p>Our experienced DJs know how to read the crowd and keep the party going. 
+        We offer a wide range of music genres to suit every taste.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-calendar-alt"></i>
+      <h3>Event Planning</h3>
+      <p>We work closely with our clients to understand their vision and bring it to life. 
+        Our event planning services ensure a seamless and stress-free experience.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-calendar"></i>
+      <h3>Event Management</h3>
+      <p>Our event management service covers all aspects of organizing and coordinating events. 
+        From logistics to on-the-day execution, we ensure every detail is managed efficiently to create a flawless event.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Sound and Lights Rentals</h3>
+      <p>We provide top-quality sound systems and lighting equipment for hire. 
+        Whether it's a small gathering or a large event, our rentals will enhance the ambiance and ensure your event stands out.</p>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <h2>Our Packages</h2>
+  <div class="packages">
+    <div class="package">
+      <i class="fas fa-star"></i>
+      <h3>Basic Package</h3>
+      <p>4 hours of professional DJ services.</p>
+      <a href="basic-package.html" class="btn">View Details</a>
+    </div>
+    <div class="package">
+      <i class="fas fa-star"></i>
+      <h3>Premium Package</h3>
+      <p>8 hours of professional DJ services, lighting, and event planning.</p>
+      <a href="premium-package.html" class="btn">View Details</a>
+    </div>
+    <div class="package">
+      <i class="fas fa-star"></i>
+      <h3>Ultimate Package</h3>
+      <p>All-inclusive services, including professional DJ services, lighting, event planning, and more.</p>
+      <a href="ultimate-package.html" class="btn">View Details</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div style="display: flex; justify-content: center; gap: 1rem;">
+    <a href="https://wa.me/2678612619" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></ai>
+    <a href="mailto:khebazpromotions@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+  </div>
+  
+  <!-- Social Media Icons -->
+  <div class="social-icons">
+    <h3>Follow Us</h3>
+    <a href="https://www.facebook.com/djkhebaz.entertainment" target="_blank">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+    <a href="https://twitter.com/@Rams04889132" target="_blank">
+      <i class="fab fa-twitter-square"></i>
+    </a>
+    <a href="https://www.instagram.com/kabeloramapulana" target="_blank">
+      <i class="fab fa-instagram-square"></i>
+      </a>
+      <a href="https://www.youtube.com/@khebazpromotions" target="_blank">
+        <i class="fab fa-youtube"></i>
+        </a>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.package a').forEach(anchor => {
+    anchor.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.open(anchor.getAttribute('href'), '_blank');
+    });
+  });
+</script>
+<div id="map">
+  <h2>Our Location</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3663.0962110232526!2d25.318949!3d-24.999684000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDU5JzU4LjkiUyAyNcKwMTknMDguMiJF!5e1!3m2!1sen!2s!4v1725190937667!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+        
+    </iframe>
+  <a href="https://maps.app.goo.gl/QLMXAiLv7iCKjfoh7" target="_blank"></a></div>
+
+<div id="contact-us">
+  <h2>Contact Us</h2>
+  <form action="https://api.whatsapp.com/send" method="get">
+    <input type="hidden" name="phone" value="26778612619">
+    <input type="hidden" name="text" value="Hello! I'd like to get in touch.">
+    <button type="submit">WhatsApp Now</button>
+  </form>
+  
+  </form>
+</div>
+</div>
+<div id="social-media">
+  <a href="https://www.facebook.com/djkhebaz.entertainment" target="_blank">Facebook</a>
+  <a href="https://www.youtube.com/@khebazpromotions" target="_blank">YouTube</a>
+  <a href="https://www.tiktok.com/@kabeloramapulana" target="_blank">TikTok</a>
+  <a href="https://wa.me/26778612619" target="_blank">WhatsApp</a>
+</div>
+</body>
+</html>

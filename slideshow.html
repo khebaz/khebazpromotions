@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrooveSphere DJ Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Add your existing CSS styles here... */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    section {
+      padding: 2rem 1rem;
+    }
+    /* Navigation and other styles... */
+    /* ... */
+    .slideshow {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
+    .contact-form, .advertise-form, .ticket-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    /* Further styles for forms and other sections */
+    /* ... */
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <img src="your-logo-url.png" alt="GrooveSphere Logo" style="width: 150px;">
+  </div>
+</header>
+
+<section id="home">
+  <img src="https://i.imgur.com/Tr494jD.jpeg" alt="Khebaz Promotions in Action" class="hero-image">
+  <div class="hero-content">
+    <h2>Elevate Your Event with Khebaz Promotions</h2>
+    <p>Professional DJ Services for Your Special Day</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn btn-large">Contact Us</a>
+      <a href="#packages" class="btn btn-large">View Packages</a>
+    </div>
+  </div>
+</section>
+
+<section class="slideshow">
+  <img class="slide" src="event1.jpg" alt="Event 1">
+  <img class="slide" src="event2.jpg" alt="Event 2">
+  <img class="slide" src="event3.jpg" alt="Event 3">
+  <div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+<section id="news-feed">
+  <h2>News Feed</h2>
+  <div class="news-articles">
+    <!-- Example news articles -->
+    <article>
+      <h3>Our Recent Event</h3>
+      <p>Details about your recent event...</p>
+    </article>
+    <article>
+      <h3>Upcoming Events</h3>
+      <p>Details about your upcoming events...</p>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="policies">
+  <h2>Policies</h2>
+  <ul>
+    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="cookies.html">Cookie Policy</a></li>
+  </ul>
+</section>
+
+<section id="events">
+  <h2>Our Events</h2>
+  <div>
+    <h3>Upcoming Events</h3>
+    <!-- Details about upcoming events -->
+  </div>
+  <div>
+    <h3>Previous Events</h3>
+    <p>Videos and highlights from our previous events...</p>
+  </div>
+  <div>
+    <h3>Buy Tickets Online</h3>
+    <form class="ticket-form">
+      <input type="text" placeholder="Event Name" required>
+      <input type="number" placeholder="Number of Tickets" required>
+      <button type="submit">Buy Tickets</button>
+    </form>
+  </div>
+</section>
+
+<section id="book-us">
+  <h2>Book Us</h2>
+  <form class="advertise-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="date" placeholder="Event Date" required>
+    <textarea placeholder="Event Details" required></textarea>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="calendar">
+  <h2>Event Calendar</h2>
+  <!-- Embed a calendar here or simply list your upcoming events -->
+</section>
+
+<footer>
+  <div style="text-align: center; padding: 1rem;">
+    <p>&copy; 2023 GrooveSphere DJ Services. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change slide every 2 seconds
+  }
+
+  function changeSlide(n) {
+    slideIndex += n;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
+    showSlides();
+  }
+</script>
+
+</body>
+</html>

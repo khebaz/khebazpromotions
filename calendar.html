@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khebaz Promotions Events Calendar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css">
+    <style>
+        /* Set the background color for the entire page */
+        body {
+            background-color: #e49319;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Center the container horizontally and vertically */
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh; /* Makes the container take the full height of the viewport */
+        }
+
+        /* Center the text inside the container */
+        .text-center {
+            text-align: center;
+            color: #fff; /* White color for better contrast */
+        }
+
+        /* Style for event blocks */
+        .event-block {
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+            width: 80%; /* 4/5 of the container's width */
+            background-color: #6a329f; /* Medium dim purple */
+            color: #fff; /* White text color for contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-block h2 {
+            margin-bottom: 10px;
+            color: #ffda79; /* Light gold color for event name */
+        }
+
+        .event-details {
+            margin-bottom: 15px;
+        }
+
+        .ticket-prices {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .ticket-prices div {
+            flex: 1;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #ffffff; /* White background for ticket prices */
+            color: #333; /* Dark text color for readability */
+            text-align: center;
+        }
+
+        /* Style for the Call Now button */
+        .call-now-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffda79; /* Light gold color */
+            color: #333; /* Dark text color */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .call-now-btn:hover {
+            background-color: #e6c367; /* Slightly darker gold on hover */
+        }
+
+        /* Style for the Social Media Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background-color: #cdb53d; /* Medium dim purple */
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Style for the Back to Home Button */
+        .back-to-home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #dbc117; /* Medium dim purple */
+            color: #fff; /* White text color */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-home-btn:hover {
+            background-color: #a17f37; /* Darker purple on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-content">
+        <!-- Back to Home Button -->
+        <a href="index.html" class="back-to-home-btn">Back to Home</a>
+
+        <h1 class="text-center">Khebaz Promotions Upcoming Events</h1>
+
+        <!-- Example of an Event Block -->
+        <div class="event-block">
+            <h2>Event Name: Khebaz Promotions Launch</h2>
+            <div class="event-details">
+                <p><strong>Date:</strong> September 30, 2024</p>
+                <p><strong>Venue:</strong> Lodubeng Village Park</p>
+                <p><strong>Dress Code:</strong> Casual Chic</p>
+            </div>
+            <div class="ticket-prices">
+                <div>
+                    <h3>Early Bird</h3>
+                    <p>P30.00</p>
+                </div>
+                <div>
+                    <h3>At the Gate</h3>
+                    <p>P50.00</p>
+                </div>
+                <div>
+                    <h3>Two People Discount</h3>
+                    <p>P80.00</p>
+                </div>
+                <div>
+                    <h3>VIP Ticket</h3>
+                    <p>No Vip</p>
+                </div>
+                <div>
+                    <h3>VVIP Ticket</h3>
+                    <p>No VVIP</p>
+                </div>
+            </div>
+            <!-- Call Now Button -->
+            <a href="https://wa.me/26778612619" class="call-now-btn">Book Now WhatsApp</a>
+            <a href="tel:+26778612619" class="call-now-btn">Call Now</a>
+        </div>
+        <div class="event-block">
+            <h2>Event Name: Summer Fest 2024</h2>
+            <div class="event-details">
+                <p><strong>Date:</strong> August 30, 2024</p>
+                <p><strong>Venue:</strong> Kanye Stadium</p>
+                <p><strong>Dress Code:</strong> Casual Chic</p>
+            </div>
+            <div class="ticket-prices">
+                <div>
+                    <h3>Early Bird</h3>
+                    <p>P150.00</p>
+                </div>
+                <div>
+                    <h3>At the Gate</h3>
+                    <p>P200.00</p>
+                </div>
+                <div>
+                    <h3>Two People Discount</h3>
+                    <p>P350.00</p>
+                </div>
+                <div>
+                    <h3>VIP Ticket</h3>
+                    <p>P500.00</p>
+                </div>
+                <div>
+                    <h3>VVIP Ticket</h3>
+                    <p>P800.00</p>
+                </div>
+            </div>
+            <!-- Call Now Button -->
+            <a href="https://wa.me/26778612619" class="call-now-btn">Call Now via WhatsApp</a>
+            <a href="tel:+26778612619" class="call-now-btn">Call Now Directly</a>
+        </div>
+        <div class="event-block">
+            <h2>Event Name: Summer Fest 2024</h2>
+            <div class="event-details">
+                <p><strong>Date:</strong> August 30, 2024</p>
+                <p><strong>Venue:</strong> Kanye Stadium</p>
+                <p><strong>Dress Code:</strong> Casual Chic</p>
+            </div>
+            <div class="ticket-prices">
+                <div>
+                    <h3>Early Bird</h3>
+                    <p>P150.00</p>
+                </div>
+                <div>
+                    <h3>At the Gate</h3>
+                    <p>P200.00</p>
+                </div>
+                <div>
+                    <h3>Two People Discount</h3>
+                    <p>P350.00</p>
+                </div>
+                <div>
+                    <h3>VIP Ticket</h3>
+                    <p>P500.00</p>
+                </div>
+                <div>
+                    <h3>VVIP Ticket</h3>
+                    <p>P800.00</p>
+                </div>
+            </div>
+            <!-- Call Now Button -->
+            <a href="https://wa.me/26778612619" class="call-now-btn">Call Now via WhatsApp</a>
+            <a href="tel:+26778612619" class="call-now-btn">Call Now Directly</a>
+        </div>
+        <div class="event-block">
+            <h2>Event Name: Summer Fest 2024</h2>
+            <div class="event-details">
+                <p><strong>Date:</strong> August 30, 2024</p>
+                <p><strong>Venue:</strong> Kanye Stadium</p>
+                <p><strong>Dress Code:</strong> Casual Chic</p>
+            </div>
+            <div class="ticket-prices">
+                <div>
+                    <h3>Early Bird</h3>
+                    <p>P150.00</p>
+                </div>
+                <div>
+                    <h3>At the Gate</h3>
+                    <p>P200.00</p>
+                </div>
+                <div>
+                    <h3>Two People Discount</h3>
+                    <p>P350.00</p>
+                </div>
+                <div>
+                    <h3>VIP Ticket</h3>
+                    <p>P500.00</p>
+                </div>
+                <div>
+                    <h3>VVIP Ticket</h3>
+                    <p>P800.00</p>
+                </div>
+            </div>
+            <!-- Call Now Button -->
+            <a href="https://wa.me/26778612619" class="call-now-btn">Call Now via WhatsApp</a>
+            <a href="tel:+26778612619" class="call-now-btn">Call Now Directly</a>
+        </div>
+        <div class="event-block">
+            <h2>Event Name: Summer Fest 2024</h2>
+            <div class="event-details">
+                <p><strong>Date:</strong> August 30, 2024</p>
+                <p><strong>Venue:</strong> Kanye Stadium</p>
+                <p><strong>Dress Code:</strong> Casual Chic</p>
+            </div>
+            <div class="ticket-prices">
+                <div>
+                    <h3>Early Bird</h3>
+                    <p>P150.00</p>
+                </div>
+                <div>
+                    <h3>At the Gate</h3>
+                    <p>P200.00</p>
+                </div>
+                <div>
+                    <h3>Two People Discount</h3>
+                    <p>P350.00</p>
+                </div>
+                <div>
+                    <h3>VIP Ticket</h3>
+                    <p>P500.00</p>
+                </div>
+                <div>
+                    <h3>VVIP Ticket</h3>
+                    <p>P800.00</p>
+                </div>
+            </div>
+            <!-- Call Now Button -->
+            <a href="https://wa.me/26778612619" class="call-now-btn">Call Now via WhatsApp</a>
+            <a href="tel:+26778612619" class="call-now-btn">Call Now Directly</a>
+        </div>
+
+        <!-- Social Media Icons at the Bottom -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/djkhebaz.entertainment" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://wa.me/26778612619" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.youtube.com/@khebazpromotions" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            </a>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>
